@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ASTROCAPS - NASA APOD API</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="assets/css/Minecrafter.css">
+    <link rel="stylesheet" href="assets/css/Minecrafter%20Alt.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Sticky_Background.css">
+</head>
+
+
+
+<body>
+
+    <section id="header" style="height: 100%;">
+
+
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="margin-right: auto;margin-left: auto;width: 100%;">
+
+            <div class="container-fluid" id="sitename_container"><a class="navbar-brand text-uppercase text-center" id="sitename_link" href="index.html" style="font-family: 'Minecrafter Alt';font-size: 40px;letter-spacing: 2px;padding-top: 0px;padding-bottom: 0px;width: auto;margin-right: auto;margin-left: auto;">ASTROCAPS</a>
+
+                <button
+                    class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+
+            </div>
+
+        </nav>
+
+
+        <header class="text-center masthead" id="header" style="background-image: url(&quot;assets/img/nasa_window.jpg&quot;);height: 100%;">
+
+
+            <div class="container">
+
+                <div class="overlay" style="height: 100%;"></div>
+
+                <div class="row" style="padding-top: 120px;">
+
+                    <div class="col-lg-8 text-center m-auto">
+
+                        <div class="row antigrav" id="sitepic_row" style="margin-top: 0px;margin-bottom: 0px;padding-top: 10px;padding-bottom: 10px;"><img class="d-none d-xl-flex" data-bs-hover-animate="tada" id="sitepic" src="assets/img/astronaut.gif" style="width: 150px;margin-left: auto;margin-right: auto;">
+
+                        </div>
+
+
+                        <div class="row text-center antigrav" id="welcome_bar">
+
+                            <p data-bs-hover-animate="rubberBand" id="welcome_msg" style="font-family: Minecrafter;font-weight: 300;font-size: 40px;color: rgb(255,199,0);margin-top: 0px;margin-bottom: 0px;height: 100%;letter-spacing: 2px;width: 100%;line-height: 35px;">SPAAACCEEEE</p>
+
+                        </div>
+
+
+                        <div id="site_description_bar">
+
+                            <p id="site_description" class="intro-text" style="font-family: 'Titillium Web', sans-serif;color: rgb(255,255,255);font-size: 20px;line-height: 30px;">A website that fetches photos and data from NASA's APOD <br>(Astronomy Picture Of the Day) website !<br></p>
+
+                        </div>
+
+
+                        <div id="site_description_bar2">
+
+                            <p id="site_description2" class="intro-text" style="font-family: 'Titillium Web', sans-serif;color: rgb(230,230,230);font-size: 15px;line-height: 30px;">Powered by&nbsp;NASA's APOD API:<br>https://api.nasa.gov/<br></p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+    </section>
+
+
+
+    <section id="content" class="scroller">
+
+
+        <div class="overlay" style="height: 100%;color: rgb(0,0,0);background-color: rgba(30,30,30,0.7);">
+
+
+            <section>
+
+
+                <div class="container" id="content_header_container" style="padding: 15px;padding-top: 35px;">
+
+
+                    <div class="row" id="content_header_bar">
+
+                        <h1 class="text-center" id="content_header" style="width: 100%;color: rgb(255,255,255);font-family: Minecrafter;font-size: 50px;font-weight: normal;padding: 10px;background-color: rgba(0,0,0,0.65);margin-bottom: 0px;">ASTRONOMY PICTURE OF THE DAY<br></h1>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="container" id="apod_container" style="padding: 35px;">
+
+                    <div class="row antigrav" id="apod_title_bar">
+
+                        <h1 class="text-center" id="apod_title" style="width: 100%;color: rgb(255,255,255);font-family: 'Titillium Web', sans-serif;font-size: 50px;font-weight: normal;padding: 10px;background-color: rgba(0,0,0,0);font-style: normal;">Sample Title<br></h1>
+
+                    </div>
+
+
+                    <div class="row antigrav" id="apod_pic_bar" style="padding-top: 40px;"><img class="img-fluid d-flex mx-auto" id="apod_pic" src="assets/img/earth.jpg" style="width: 100%;">
+
+                    </div>
+
+
+                    <div class="row" id="apod_detail_bar">
+
+
+                        <div id="apod_details_margins" class="bg-faded p-5 rounded antigrav" style="color: rgb(255,255,255);padding: 49px;width: 100%;">
+
+
+                            <div class="row" id="apod_details_date_bar" style="padding: 15px;">
+
+                                <h1 class="text-uppercase text-center" id="apod_details_date_head" style="width: 100%;font-family: 'Titillium Web', sans-serif;font-size: 25px;color: rgb(255,255,255);font-weight: bold;">Date :</h1>
+
+                                <p class="text-center mb-0" id="apod_details_date_content" style="font-family: 'Titillium Web', sans-serif;font-size: 20px;margin-top: 15px;width: 100%;line-height: 25px;"></p>
+
+                            </div>
+
+
+                            <div class="row" id="apod_details_author_bar" style="padding: 15px;">
+
+                                <h1 class="text-uppercase text-center" id="apod_details_author_head" style="width: 100%;font-family: 'Titillium Web', sans-serif;font-size: 25px;color: rgb(255,255,255);font-weight: bold;">Image Credit and Copyright :</h1>
+
+                                <p class="text-center mb-0" id="apod_details_author_content" style="font-family: 'Titillium Web', sans-serif;font-size: 20px;margin-top: 15px;width: 100%;"></p>
+
+                            </div>
+
+
+                            <div class="row" id="apod_details_desc_bar" style="padding: 15px;">
+
+                                <h1 class="text-uppercase text-center" id="apod_details_desc_head" style="width: 100%;font-family: 'Titillium Web', sans-serif;font-size: 25px;color: rgb(255,255,255);">Description :</h1>
+
+                                <p class="text-center mb-0" id="apod_details_desc_content" style="font-family: 'Titillium Web', sans-serif;font-size: 20px;margin-top: 15px;width: 100%;line-height: 25px;"></p>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div id="astrodoggo_div" style="width: 100%;padding: 35px;">
+
+                    <div class="row antigrav" id="search_buttons_row"><img class="d-none d-xl-flex" data-bs-hover-animate="swing" id="astrodog" src="assets/img/astrodog.gif" style="width: 350px;margin-left: auto;margin-right: auto;">
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </section>
+
+
+    
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+    <script src="assets/js/current-day.js"></script>
+    <script src="assets/js/Profile-Edit-Form.js"></script>
+
+
+    <script>
+
+        $.ajax({
+            url: "https://api.nasa.gov/planetary/apod?api_key=KHIPipODBdateuUEN5ZJuYaVa1jDVqwyPG9CWnhE",
+            success: function(nasa_data){
+                document.getElementById("apod_title").innerHTML = nasa_data.title;
+                document.getElementById("apod_pic").src = nasa_data.url;
+                document.getElementById("apod_details_date_content").innerHTML=nasa_data.date;
+                document.getElementById("apod_details_author_content").innerHTML=nasa_data.copyright;
+                document.getElementById("apod_details_desc_content").innerHTML=nasa_data.explanation;
+                
+
+        }
+    });
+
+
+    </script>
+
+
+
+</body>
+
+</html>

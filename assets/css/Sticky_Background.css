@@ -1,0 +1,63 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.scroller {
+}
+
+.login {
+  background-image: url(overview.jpg);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scroller_login {
+  background-image: url(overview.jpg);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scroller {
+  background-image: url(../../assets/img/earth.jpg);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scroller_login {
+  background-image: url(underwater.jpeg);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@keyframes float {
+  0% {
+    /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    transform: translatey(0px);
+  }
+  50% {
+    /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+    transform: translatey(-20px);
+  }
+  100% {
+    /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    transform: translatey(0px);
+  }
+}
+
+.antigrav {
+  animation: float 6s ease-in-out infinite;
+}
+
