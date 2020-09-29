@@ -14,6 +14,28 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/Sticky_Background.css">
+
+    <style>
+
+    .iframe-container {
+        overflow: hidden;
+        /* 16:9 aspect ratio */
+        padding-top: 56.25%;
+        position: relative;
+      }
+      
+      .iframe-container iframe {
+         border: 0;
+         height: 100%;
+         left: 0;
+         position: absolute;
+         top: 0;
+         width: 100%;
+      }
+
+    </style>
+
+
 </head>
 
 
@@ -46,7 +68,7 @@
 
                     <div class="col-lg-8 text-center m-auto">
 
-                        <div class="row antigrav" id="sitepic_row" style="margin-top: 0px;margin-bottom: 0px;padding-top: 10px;padding-bottom: 10px;"><img class="d-none d-xl-flex" data-bs-hover-animate="tada" id="sitepic" src="assets/img/astronaut.gif" style="width: 150px;margin-left: auto;margin-right: auto;">
+                        <div class="row antigrav" id="sitepic_row" style="margin-top: 0px;margin-bottom: 0px;padding-top: 10px;padding-bottom: 10px;"><img class="d-xl-flex" data-bs-hover-animate="tada" id="sitepic" src="assets/img/astronaut.gif" style="width: 150px;margin-left: auto;margin-right: auto;">
 
                         </div>
 
@@ -117,7 +139,10 @@
                     </div>
 
 
-                    <div class="row antigrav" id="apod_pic_bar" style="padding-top: 40px;"><img class="img-fluid d-flex mx-auto" id="apod_pic" src="assets/img/earth.jpg" style="width: 100%;">
+                    <div class="antigrav iframe-container" id="apod_pic_bar" >
+                        
+                        <iframe id="apod_pic" src="assets/img/earth.jpg" style="border:none;" scrolling="no" frameborder="0" width="100%" allowfullscreen>
+                        </iframe>
 
                     </div>
 
@@ -166,7 +191,7 @@
 
                 <div id="astrodoggo_div" style="width: 100%;padding: 35px;">
 
-                    <div class="row antigrav" id="search_buttons_row"><img class="d-none d-xl-flex" data-bs-hover-animate="swing" id="astrodog" src="assets/img/astrodog.gif" style="width: 350px;margin-left: auto;margin-right: auto;">
+                    <div class="row antigrav" id="search_buttons_row"><img class="d-xl-flex" data-bs-hover-animate="swing" id="astrodog" src="assets/img/astrodog.gif" style="width: 350px;margin-left: auto;margin-right: auto;">
 
                     </div>
 
@@ -197,7 +222,8 @@
 
         $.ajax({
             url: "https://api.nasa.gov/planetary/apod?api_key=KHIPipODBdateuUEN5ZJuYaVa1jDVqwyPG9CWnhE",
-            success: function(nasa_data){
+            success: function(nasa_data)
+            {
                 document.getElementById("apod_title").innerHTML = nasa_data.title;
                 document.getElementById("apod_pic").src = nasa_data.url;
                 document.getElementById("apod_details_date_content").innerHTML=nasa_data.date;
@@ -205,7 +231,7 @@
                 document.getElementById("apod_details_desc_content").innerHTML=nasa_data.explanation;
                 
 
-        }
+            }
     });
 
 
